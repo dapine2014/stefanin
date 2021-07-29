@@ -15,7 +15,8 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Table(name = "CLIENTS")
 public class Client implements Serializable {
-    @Id
+	private static final long serialVersionUID = 4033773932194076261L;
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID",unique = true)
     private Long id;
