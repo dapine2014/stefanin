@@ -30,7 +30,6 @@ public class Client implements Serializable {
     private String contact;
     @Column(name = "Location")
     private String location;
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name ="typeClient", referencedColumnName = "id")
-    private TypeClient typeClient;
+    @Column(name = "TypeClient")
+    private String typeClient;
 }
