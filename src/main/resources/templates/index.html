@@ -33,7 +33,7 @@
             <td><p th:text=${client.typeClient}/></td>
             <td>
               <a class="btn btn-primary" th:href="@{/edit/}+${client.id}" >Edit</a>
-              <a class="btn btn-warning" th:href >Delete</a> 
+              <a class="btn btn-warning" th:href="@{/delete/}+${client.id}" >Delete</a>
             </td>
         </tr>
         </tbody>

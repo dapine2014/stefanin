@@ -32,14 +32,12 @@ public class ClientController {
      
       return "form";
     }
-    
     @PostMapping("/save")
     public String save(@Valid Client client, Model model){
     	iClientService.save(client);  
      
     	return "redirect:/index";
     }
-    
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable Long id, Model model){
         Optional<Client> client = iClientService.findById(id);
@@ -47,7 +45,11 @@ public class ClientController {
 
       return "form";
     }
-   
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable Long id,Model model){
+        iClientService.deleteById(id);
+       return "redirect:/index";
+    }
     
 
 }
